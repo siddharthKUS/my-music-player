@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My FLAC Music</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      background: #121212;
+      color: white;
+      font-family: Arial;
+      padding: 20px;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      margin: 6px 0;
+      background: #1db954;
+      border: none;
+      color: black;
+      font-size: 16px;
+      border-radius: 6px;
+    }
+    audio {
+      width: 100%;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+<h2>🎧 My FLAC Library</h2>
+
+<button onclick="playSong('PASTE_SONG_LINK_1')">Song 1</button>
+<button onclick="playSong('PASTE_SONG_LINK_2')">Song 2</button>
+<button onclick="playSong('PASTE_SONG_LINK_3')">Song 3</button>
+
+<audio id="player" controls></audio>
+
+<script>
+function playSong(url) {
+  const player = document.getElementById("player");
+  player.src = url;
+  player.play();
+}
+</script>
+
+</body>
+</html>
